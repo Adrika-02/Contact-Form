@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+  <div class="animated-bg">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+
+  <div class="container">
+    <img src="https://i.pinimg.com/736x/f2/81/99/f281990ecb559eeb85cdbadbfbf84483.jpg" alt="Bear mascot" style="width: 100px; margin-bottom: 20px;" />
+    <h1>Contact Us</h1>
+
+    <button id="themeToggle" title="Toggle Theme">🌞</button>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+      <div class="progress-steps">
+        <span class="step-indicator active">1</span>
+        <span class="step-indicator">2</span>
+        <span class="step-indicator">3</span>
+      </div>
+    </div>
+
+    <form id="contactForm">
+
+      <div class="form-step active">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <small class="error" id="nameError"></small>
+        <div class="form-navigation">
+          <button type="button" id="next1">Next ➡️</button>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+        <small class="error" id="emailError"></small>
+        <div class="form-navigation">
+          <button type="button" id="prev1">⬅️ Previous</button>
+          <button type="button" id="next2">Next ➡️</button>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" maxlength="300"></textarea>
+        <small class="error" id="messageError"></small>
+        <small id="charCount">0 / 300</small>
+        <div class="form-navigation spaced-buttons">
+          <button type="button" id="prev2">⬅️ Previous</button>
+          <button type="submit" id="submitBtn">✅ Submit</button>
+        </div>
+      </div>
+
+      <div id="loading" class="spinner hidden"></div>
+      <p class="success" id="successMessage"></p>
+      <p class="complete" id="completeMessage"></p>
+    </form>
+  </div>
+
+  <button id="backToTop" title="Back to Top">⬆️</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
